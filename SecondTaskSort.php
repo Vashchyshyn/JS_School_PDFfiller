@@ -23,7 +23,7 @@ class SecondTaskSort
         return $count === count($array) ? true : false;
     }
 
-    // Второе задание V2
+    // Второе задание
     public function search(array $array, $value)
     {
         $count = count($array);

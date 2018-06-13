@@ -2,9 +2,9 @@
 
 class FirstTaskTable
 {
-    public function init()
+    public function init($count)
     {
-        $this->spiralTransformation(5);
+        $this->spiralTransformation($count);
     }
 
     // Первое задание
@@ -34,25 +34,21 @@ class FirstTaskTable
         }
 
         while ($counter1 < $width * $height) {
-            // Вправо
             while ($array[$counter2][$counter3 + 1] == 0) {
                 $array[$counter2][$counter3] = $counter1;
                 $counter1++;
                 $counter3++;
             }
-            //Вниз.
             while ($array[$counter2 + 1][$counter3] == 0) {
                 $array[$counter2][$counter3] = $counter1;
                 $counter1++;
                 $counter2++;
             }
-            //Влево.
             while ($array[$counter2][$counter3 - 1] == 0) {
                 $array[$counter2][$counter3] = $counter1;
                 $counter1++;
                 $counter3--;
             }
-            //Вверх.
             while ($array[$counter2 - 1][$counter3] == 0) {
                 $array[$counter2][$counter3] = $counter1;
                 $counter1++;
